@@ -11,14 +11,14 @@ jspm install
 ```
 
 Create .env file with parameters:
-AUTH0_CLIENT_ID
-AUTH0_CLIENT_SECRET
-AUTH0_DOMAIN
+* AUTH0_CLIENT_ID
+* AUTH0_CLIENT_SECRET
+* AUTH0_DOMAIN
 
 Create auth0-variables.js file with parameters:
-var AUTH0_CLIENT_ID
-var AUTH0_DOMAIN
-var AUTH0_CALLBACK_URL=location.href;
+* var AUTH0_CLIENT_ID
+* var AUTH0_DOMAIN
+* var AUTH0_CALLBACK_URL=location.href;
 
 Run the application with a web server.
 
