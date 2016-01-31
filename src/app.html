@@ -1,0 +1,21 @@
+<template>
+  <h1>${message}</h1>
+  <h2>user : ${username}</h2>
+  <!-- <button click.delegate="login()" if.bind="isAuthenticated">Log In</button>
+  <button click.delegate="logout()" if.bind="!isAuthenticated">Log Out</button> -->
+
+  <button click.delegate="login()" if.bind="!isAuthenticated">Log In</button>
+  <button click.delegate="logout()" if.bind="isAuthenticated">Log Out</button>
+
+  <hr>
+  <button click.delegate="getSecretThing()" if.bind="isAuthenticated">Get Secret Thing</button>
+  <!-- <h3 >${secretThing}</h3> -->
+  <pre if.bind="isAuthenticated">${secretThing}</pre>
+
+  <button click.delegate="getDecodedJwt()" if.bind="isAuthenticated">Get Decoded JWT</button>
+  <pre if.bind="isAuthenticated">${decodedJwt}</pre>
+  <hr>
+  <a href="#/public-route">Public Route</a>
+  <a href="#/private-route" if.bind="isAuthenticated">Private Route</a>
+  <router-view></router-view>
+</template>
