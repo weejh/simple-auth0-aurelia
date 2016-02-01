@@ -5,7 +5,7 @@ var app = express();
 var jwt = require('express-jwt');
 var dotenv = require('dotenv');
 
-dotenv.load();
+// dotenv.load();
 
 var authenticate = jwt({
   secret: new Buffer(process.env.AUTH0_CLIENT_SECRET, 'base64'),
